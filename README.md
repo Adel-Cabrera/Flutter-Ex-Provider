@@ -19,12 +19,12 @@
 
 > create provider file
 >
-> extend your class with like this => class MyClass with ChangeNotifier
+> extend your class like this => class MyClass with ChangeNotifier
 >
 >> Create getter and setter for this class. In the setter, add this line => notifyListeners();
 >
 
-## On Main function |
+## Single Provider Instance | On Main function
 
 > Import provider package with => import 'package:provider/provider.dart';
 >
@@ -35,7 +35,7 @@
 >> Import the class => import 'package:flutterapp/src/providers/MyClass.dart';
 
 
-## Multiple Provider Instances
+## Multiple Provider Instances | On Main function
 
 > Don't use ChangeNotifierProvider. Use instead MultiProvider().
 >
@@ -56,5 +56,5 @@
 > Wrap the widget with Consumer<MyClass> and his builder
 >
 >> Consumer<MyClass>(
-          builder: (context, myClassAccessor , _) => WidgetToUpdate(attr : myClass.attr)
+          builder: (context, myClassAccessor , _) => WidgetToUpdate(attr : myClass.attr) );
 
